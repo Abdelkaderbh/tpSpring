@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Update Voiture</title>
+</head>
+<body>
+<div class="container my-5">
+    <h3> Ajout Voiture</h3>
+    <div class="card">
+        <div class="card-body">
+            <div class="col-md-10">
+                <form action="#" th:action="@{update/voiture/{id}(id=${Voiture.id})}" th:object="${Voiture}"
+                      method="post">
+                    <div class="row">
+
+                        <div class="form-group col-md-8">
+                            <label for="Serie" class="col-form-label">Serie</label>
+                            <input type="Serie" th:field="*{serie}" class="form-control"
+                                   id="Serie" placeholder="Serie" />
+                        </div>
+
+                        <div class="form-group col-md-8">
+                            <label for="Date_Mise_en" class="col-form-label">date_Mise_en</label>
+                            <input type="date" th:field="*{date_Mise_en}" class="form-control"
+                                   id="Date_Mise_en" placeholder="Date_Mise_en" />
+                        </div>
+
+                        <div class="form-group col-md-8">
+                            <label for="Date_Mise_en" class="col-form-label">Modele_Nm</label>
+                            <input type="text" th:field="*{modele_Nm}" class="form-control"
+                                   id="Modele_Nm" placeholder="Modele_Nm" />
+                        </div>
+
+
+                        <div class="col-md-6">
+                            <input type="submit" class="btn btn-primary" value=" Submit ">
+                        </div>
+
+                        <input type="hidden" id="id" th:field="*{id}">
+
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
